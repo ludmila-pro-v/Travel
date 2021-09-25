@@ -52,13 +52,13 @@ var myChart = new Chart(ctx, {
 // menu tabs
 const tabsMenu = document.querySelectorAll('[data-tabs-menu]');
 
-for (const menu of tabsMenu) {
-  menu.addEventListener('click', () => {
+for (const menuButton of tabsMenu) {
+  menuButton.addEventListener('click', () => {
     
     tabsMenu.forEach(item => {
       let iconImage = item.querySelector('.menu__icon-image');
-    console.log('iconImage: ', iconImage);
-      if (menu == item) {
+    // console.log('iconImage: ', iconImage);
+      if (menuButton == item) {
         item.classList.add('menu__icon--active');
         iconImage.classList.add('menu__icon-image--active');
       } else {
@@ -69,6 +69,20 @@ for (const menu of tabsMenu) {
   });
 }
 
+// menu hidden
+const menu = document.querySelector('.menu');
+const menuHidden = document.querySelector('.menu__start');
+const dashboard = document.querySelector('.dashboard__container');
+
+menuHidden.addEventListener('click', () => {
+  menu.classList.toggle('hidden');
+  if(menu.classList.contains('hidden')) {
+    dashboard.style.marginLeft = "0";
+  } else {
+    dashboard.style.marginLeft = "130px";
+  };
+  
+});
 // explore tabs
 
 const tabsArea = document.querySelectorAll('[data-tabs-area]');

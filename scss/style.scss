@@ -17,7 +17,6 @@ body {
   margin: 0;
   font-family: 'Gilroy', sans-serif;
   position: relative;
-  width: 100vw;
 }
 
 h1,
@@ -86,7 +85,7 @@ li {
   }
 
 
-  &__container {
+  &-container {
     padding-left: 175px;
     display: grid;
     grid-template-columns: 85px 1fr 52px;
@@ -100,9 +99,13 @@ li {
     }
 
     @media screen and (max-width: 800px) {
+      padding-left: 78px;
+    }
+
+    @media screen and (max-width: 500px) {
+      padding-left: 31px;
       grid-template-columns: 1fr;
       grid-gap: 4vw;
-      padding-left: 31px;
     }
 
 
@@ -122,6 +125,14 @@ li {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+    transition: 1s; 
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+
 
     &-shadow {
       position: absolute;
@@ -130,6 +141,8 @@ li {
       width: 36px;
       background: #F86549;
       filter: blur(28px);
+
+
     }
 
     &-icon {
@@ -151,7 +164,7 @@ li {
     appearance: none;
 
     @media screen and (max-width: 1055px) {
-      width: 100%;
+      width: 240px;
     }
 
     &::placeholder {
@@ -167,7 +180,7 @@ li {
       justify-self: end;
       z-index: 22;
 
-      @media screen and (max-width: 800px) {
+      @media screen and (max-width: 500px) {
         justify-self: start;
       }
     }
@@ -187,7 +200,7 @@ li {
     top: 113px;
     bottom: 0;
     text-align: center;
-    width: 131px;
+    width: 130px;
     // height: 100vw;
 
     @media screen and (max-width: 800px) {
@@ -224,13 +237,13 @@ li {
     height: 113px;
     width: 130px;
     position: absolute;
-    top: -113px;
+    cursor: pointer;
+    top: 0;
     left: 0;
     z-index: 22;
 
     @media screen and (max-width: 800px) {
-      width: 100vw;
-      height: 70px;
+      display: none;
     }
   }
 
@@ -243,6 +256,10 @@ li {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    &:hover {
+      box-shadow: rgb(88 92 229 / 15%) 0px 10px 20px;
+    }
 
     &--active {
       background: #FF6647;
@@ -313,14 +330,14 @@ li {
   }
 
   &__container {
-    margin-left: 131px;
+    margin-left: 130px;
     padding-left: 31px;
     padding-top: 55px;
     background: rgba(255, 255, 255, 0.9);
     backdrop-filter: blur(120px);
 
     @media screen and (max-width: 800px) {
-      margin-left: 0;
+      margin-left: 0!important;
     }
 
     @media screen and (max-width: 500px) {
@@ -346,10 +363,13 @@ li {
 
     @media screen and (max-width: 800px) {
       justify-content: center;
+      margin-top: 0;
     }
 
     @media screen and (max-width: 500px) {
-      grid-template-columns: 87%;
+      grid-template-columns: 100%;
+      padding-right: 53px;
+      padding-left: 53px;
     }
 
 
@@ -404,7 +424,7 @@ li {
     color: #353646;
     box-shadow: 0px 100px 80px rgba(153, 165, 236, 0.05), 0px 64.8148px 46.8519px rgba(153, 165, 236, 0.037963), 0px 38.5185px 25.4815px rgba(153, 165, 236, 0.0303704), 0px 20px 13px rgba(153, 165, 236, 0.025), 0px 8.14815px 6.51852px rgba(153, 165, 236, 0.0196296), 0px 1.85185px 3.14815px rgba(153, 165, 236, 0.012037);
     border-radius: 25px;
-    margin-bottom: 120px;
+    // margin-bottom: 120px;
     z-index: -2;
   }
 
@@ -528,6 +548,10 @@ li {
 
   }
 
+  &__description {
+    color: #757575;
+  }
+
 
   &__container {
     background: rgba(255, 255, 255, 0.9);
@@ -541,12 +565,17 @@ li {
     font-family: 'Sofia Pro', sans-serif;
 
     @media screen and (max-width: 1000px) {
-      position: sticky;
-      margin-left: 131px;
-      
+      position: static;
+      margin-left: calc((100vw - 266px)/2);
+     
     }
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 800px) {
+      margin-left: calc((100vw - 397px)/2);
+     
+    }
+
+    @media screen and (max-width: 450px) {
       margin-left: 0;
       padding-left: 25px;
       padding-right: 25px;
@@ -584,6 +613,7 @@ li {
     display: grid;
     grid-template-columns: 1fr 100px;
     margin-bottom: 31px;
+ 
 
     &-photos {
       margin-bottom: 14px;
@@ -622,12 +652,18 @@ li {
     align-items: center;
     justify-content: center;
     box-shadow: -4px 14px 24px rgba(0, 0, 0, 0.06);
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: 0 0 24px rgba(0, 0, 0, 0.2);
+    }
   }
 
   &__options {
     display: grid;
     grid-template-columns: 50% 28% 22%;
     margin-bottom: 45px;
+    color: #757575;
   }
 
   &__map {
@@ -637,7 +673,7 @@ li {
     height: 122px;
 
     @media screen and (max-width: 600px) {
-      max-width: 90vw;
+      max-width: 100%;
     }
 
 
@@ -648,7 +684,7 @@ li {
       margin-bottom: 34px;
 
       @media screen and (max-width: 600px) {
-        max-width: 90vw;
+        max-width: 100%;
       }
     }
 
@@ -663,7 +699,7 @@ li {
       height: 122px;
 
       @media screen and (max-width: 600px) {
-        max-width: 90vw;
+        max-width: 100%;
       }
     }
 
@@ -679,6 +715,12 @@ li {
     align-items: center;
     justify-content: center;
     justify-self: end;
+    cursor: pointer;
+    z-index: 22;
+
+    &:hover {
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    }
 
     &-point {
       position: relative;
@@ -725,6 +767,11 @@ li {
       width: 111px;
       border-radius: 10px;
       overflow: hidden;
+
+      @media screen and (max-width: 450px) {
+        height: 100%;
+        width: 100%;
+      }
     }
   }
 
@@ -733,12 +780,22 @@ li {
     grid-template-columns: repeat(auto-fill, 111px);
     grid-gap: 10px;
     justify-content: space-between;
+
+    @media screen and (max-width: 450px) {
+      grid-template-columns: repeat(auto-fill, 100%);
+      grid-gap: 25px;
+    }
   }
 }
 
 .friends {
   position: relative;
-  // max-width: 323px;
+  padding-right: 24px;
+
+  @media screen and (max-width: 1000px) {
+    padding-right: 0;
+  }
+
 
   &__header {
     display: grid;
@@ -763,7 +820,7 @@ li {
     grid-template-columns: repeat(3, minmax(99px, 1fr));
     justify-content: space-between;
     text-align: center;
-    grid-gap: 1vw;
+    grid-gap: 2vw;
 
     @media screen and (max-width: 800px) {
       grid-template-columns: repeat(auto-fit, minmax(99px, 1fr));
@@ -779,6 +836,11 @@ li {
     padding-top: 15px;
     position: relative;
     margin-bottom: 36px;
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: rgb(88 92 229 / 15%) 0px 10px 20px;
+    }
 
     &-image {
       margin: auto;
@@ -882,6 +944,14 @@ li {
   align-items: start;
   padding-right: 24px;
   grid-gap: 1vw;
+
+  @media screen and (max-width: 500px) {
+    padding-right: 0;
+  }
+
+  @media screen and (max-width: 350px) {
+    display: none;
+  }
   
   &__header {
     display: grid;

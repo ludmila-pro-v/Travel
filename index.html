@@ -15,18 +15,18 @@
 
 
   <!-- lightgallery plugins -->
-  <script src="js/plugins/lg-thumbnail.umd.js"></script>
-  <script src="js/plugins/lg-zoom.umd.js"></script>
+  <!-- <script src="js/lg-thumbnail.umd.js"></script>
+  <script src="js/lg-zoom.umd.js"></script> -->
 </head>
 
 <body>
 
   <nav class="menu menu__left menu--grey">
-    <div class="menu__item menu__item--dark menu__start">
+    <!-- <div class="menu__item menu__item--dark menu__start">
       <a href="#" class="menu__link">
         <div class="menu__hamburger"></div>
       </a>
-    </div>
+    </div> -->
 
     <ul class="menu__list menu--grey">
 
@@ -131,7 +131,12 @@
   <section class="dashboard">
     <div class="dashboard__sections">
       <header class="header">
-        <div class="header__container">
+        <div class="menu__item menu__item--dark menu__start">
+          <a href="#" class="menu__link">
+            <div class="menu__hamburger"></div>
+          </a>
+        </div>
+        <div class="header-container">
           <h1 class="header__title">Shikra.</h1>
           <div class="header__input-container">
             <input type="text" class="header__input" placeholder="Search">
@@ -153,7 +158,7 @@
           <!-- /.header__button -->
 
         </div>
-        <!-- /.header__container -->
+        <!-- /.header-container -->
       </header>
 
       <div class="dashboard__container">
@@ -217,7 +222,7 @@
                 </div>
                 <!-- /.explore__card -->
   
-                <div data-tabs-place="sights" class="explore__card swiper-slide">
+                <div data-tabs-place="europe" class="explore__card swiper-slide">
                   <div class="card__image-wrapper">
                     <img src="img/Greecevillage.png" alt="Greecevillage" class="card__image">
   
@@ -252,11 +257,27 @@
   
                 </div>
                 <!-- /.explore__card -->
-              </div>
 
-              <!-- If we need navigation buttons -->
-              <!-- <div class="swiper-button-prev"></div>
-              <div class="swiper-button-next"></div> -->
+                <div data-tabs-place="america" class="explore__card swiper-slide">
+                  <div class="card__image-wrapper">
+                    <img src="img/Kudahuvadhoo.png" alt="Kudahuvadhoo" class="card__image">
+  
+                  </div>
+                  <!-- /.card__image-wrapper -->
+                  <img class="card__sticker" src="img/sticker.svg" alt="sticker">
+                  <span class="card__title">Kudahuvadhoo Island</span>
+                  <div class="card__info">
+                    <img src="img/point.svg" alt="point" class="card__point">
+                    <span class="card__place">Maldives</span>
+                    <span class="card__price">$1,480</span>
+                  </div>
+                  <!-- /.card__info -->
+  
+                </div>
+                <!-- /.explore__card -->
+
+                
+              </div>
 
             </div>
 
