@@ -59,6 +59,10 @@ li {
 
 .swiper {
   width: 1670px;
+
+  &-wrapper {
+    height: 300px !important;
+  }
 }
 
 .hidden {
